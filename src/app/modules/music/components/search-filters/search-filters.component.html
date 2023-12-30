@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <nz-input-group [nzSuffix]="suffixIconSearch">
+    <input
+      nz-input
+      formControlName="artist"
+      placeholder="Empieza a buscar tu artista"
+      type="text"
+    />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    @if($loading()){
+    <span nz-icon [nzType]="'loading'"></span>
+    }@else {
+    <span nz-icon nzType="search"></span>
+    }
+  </ng-template>
+
+  <app-genres-filter formControlName="genre"></app-genres-filter>
+</form>

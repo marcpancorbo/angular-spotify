@@ -1,0 +1,7 @@
+<div class="card">
+  <img
+    [src]="artist.images.length > 0 ? artist.images[0].url : null"
+    [alt]="artist.name"
+  />
+  <span>{{ artist.name }}</span>
+</div>

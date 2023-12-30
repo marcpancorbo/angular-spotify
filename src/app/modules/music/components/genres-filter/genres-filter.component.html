@@ -1,0 +1,8 @@
+@for(genre of genres | keyvalue; track genre.key){
+<nz-tag
+  nzMode="checkable"
+  [nzChecked]="genre.value.checked"
+  (nzCheckedChange)="onCheckChange(genre.key)"
+  >{{ genre.value.name }}</nz-tag
+>
+}

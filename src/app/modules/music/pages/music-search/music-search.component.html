@@ -1,0 +1,10 @@
+<div class="content">
+  <app-search-filters
+    (search)="startSearching$.next($event)"
+  ></app-search-filters>
+  <div class="container">
+    @for(artist of $results(); track artist.id){
+    <app-artist [artist]="artist"></app-artist>
+    }
+  </div>
+</div>
